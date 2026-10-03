@@ -1,0 +1,29 @@
+// C = the bag. Each item: id = product, c = chosen color, q = quantity
+let C = [{ id: "m3", c: 0, q: 1 }];
+
+function addCart(id){
+  const c = SEL[id] || 0;                              // selected color
+  const found = C.find(i => i.id == id && i.c == c);   // same product + color?
+  found ? found.q++ : C.push({ id, c, q: 1 });         // add 1 more, or new row
+  sv(); badges("#cc");                                 // save + update bag badge
+  
+  else if (a == "qp") { C[x].q++; sv(); route(); }   // ⊕ adds 1
+
+else if (a == "qm") {                              // ⊖ subtracts 1
+  C[x].q--;
+  if (C[x].q < 1) C.splice(x, 1);                  // at 0, remove the item
+  sv(); route();
+  
+  const total = C.reduce((sum, i) => sum + byId(i.id).p * i.q, 0);
+// price × quantity for every item, added together
+
+const saved = C.reduce((sum, i) => sum + (byId(i.id).o - byId(i.id).p) * i.q, 0);
+// (old price − sale price) × quantity
+
+<div style="font:600 13px Inter;color:#555">
+  Subtotal: ${peso(p.p * it.q)}
+</div>
+
+else if (a == "qp") { if (C[x].q < 10) C[x].q++; else toast("Max 10 per item"); sv(); route(); }
+}
+}
